@@ -1,38 +1,74 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>X O game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width: 1024px)" href="styles/laptop.css" />
+    <link rel="stylesheet" media="only screen and (min-width:765px) and (max-width: 1023px)" href="styles/tablet.css">
+    <link rel="stylesheet" media="only screen and (min-width: 569px) and (max-width: 764px)"
+        href="styles/minitablet.css">
+    <link rel="stylesheet" media="only screen and (min-width: 350px) and (max-width: 568px)" href="styles/mobile.css">
+    <link rel="stylesheet" media="only screen and (min-width: 0px) and (max-width: 349px)" href="styles/minimobile.css">
+    <title>X_O game</title>
 </head>
 
 <body>
-    <p id="demo"></p>
-    <button class="reset" onclick="reset()">reset</button>
-    <button class="Continues" id="Continues" onclick="Continues()">Continues</button>
-    <table class="backgrand">
-        <tr>
-            <td class="td" id="1" onclick="xo(1)">&nbsp;</td>
-            <td class="td" id="2" onclick="xo(2)">&nbsp;</td>
-            <td class="td" id="3" onclick="xo(3)">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="td" id="4" onclick="xo(4)">&nbsp;</td>
-            <td class="td" id="5" onclick="xo(5)">&nbsp;</td>
-            <td class="td" id="6" onclick="xo(6)">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="td" id="7" onclick="xo(7)">&nbsp;</td>
-            <td class="td" id="8" onclick="xo(8)">&nbsp;</td>
-            <td class="td" id="9" onclick="xo(9)">&nbsp;</td>
-        </tr>
-    </table>
-    <div class="winner" id="winner" style="position: none;"></div>
-</body>
-<script src="script.js">
-</script>
 
+    <div class="div-backgrand">
+        <img src="backgrand.png" class="img-backgrand img-backgrand-top">
+        <img src="backgrand.png" class="img-backgrand">
+        <img src="backgrand.png" class="img-backgrand img-backgrand-bottom">
+    </div>
+    <button id="btn-reset-game">Reset Game</button>
+    <button id="btn-reset-this-match">Reset This Match</button>
+
+    <div class="start-game">
+        <div class="borde-point-player">
+            <div class="div-point-player-x" id="div-point-player-x">
+                <p id="player-x" class="player-x"></p>
+            </div>
+            <div class="div-point-player-o" id="div-point-player-o">
+                <p id="player-o" class="player-o"></p>
+            </div>
+
+        </div>
+
+        <div class="game-border">
+            <div class="section" id="section-1"></div>
+            <div class="section" id="section-2"></div>
+            <div class="section" id="section-3"></div>
+            <div class="section" id="section-4"></div>
+            <div class="section" id="section-5"></div>
+            <div class="section" id="section-6"></div>
+            <div class="section" id="section-7"></div>
+            <div class="section" id="section-8"></div>
+            <div class="section" id="section-9"></div>
+        </div>
+
+        <div class="main-creat-name-player" id="main-creat-name-player">
+            <div class="creat-name-player">
+                <input type="text" id="name-player-x" required class="name-player-x" autocomplete="off">
+                <label for="name-player-x" class="name-player-x-lable">Name Player X</label>
+                <br>
+                <input type="text" id="name-player-o" required class="name-player-o" autocomplete="off">
+                <label for="name-player-o" class="name-player-o-lable">Name Player O</label>
+                <br>
+                <button id="btn-start-game">Start Game</button>
+                <br>
+                <button id="btn-start-game-default">Start with default names</button>
+                <br>
+                <!-- <button id="btn-play-computer-game">Play witch computer</button> -->
+            </div>
+        </div>
+
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="js/javascript.js"></script>
+<script src="js/all-operations.js"></script>
+<script src="js/computer-games.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
 </html>

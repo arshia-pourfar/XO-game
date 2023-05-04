@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.img-backgrand {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: 0%;
+}
+
+.img-backgrand-top {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: -110%;
+}
+
+.img-backgrand-bottom {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: 110%;
+}
+
+.div-backgrand {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: -20px;
+    animation: 80s linear 0s infinite toolstheme;
+}
+
+@keyframes toolstheme {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.game-border {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 8%;
+    position: relative;
+    box-shadow: 2px 6px 10px 5px rgb(78, 78, 78);
+}
+
+.section {
+    margin: 0 auto;
+    float: left;
+    width: 33.3%;
+    height: 33.3%;
+    border: 1px solid black;
+    font-size: 8.5em;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.section:active {
+    cursor: grabbing;
+}
+
+.borde-point-player {
+    position: absolute;
+    min-width: 320px;
+    height: 35px;
+    top: 5%;
+    left: 39%;
+    text-align: center;
+}
+
+.div-point-player-x {
+    position: relative;
+    width: 47%;
+    height: 100%;
+    float: left;
+    background-color: #003cff;
+}
+
+.div-point-player-o {
+    position: relative;
+    width: 47%;
+    height: 100%;
+    float: right;
+    background-color: #00000091;
+}
+
+.player-x {
+    font-size: 1.7em;
+    margin-top: 2%;
+    position: relative;
+    color: white;
+}
+
+.player-o {
+    font-size: 1.7em;
+    margin-top: 2%;
+    position: relative;
+    color: white;
+}
+
+#btn-reset-game {
+    position: absolute;
+    width: 12%;
+    height: 40px;
+    top: 2%;
+    left: 1%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 6px;
+    border-color: transparent;
+    cursor: pointer;
+    background: linear-gradient(to right bottom, #ffd200, #ff5300);
+}
+
+#btn-reset-this-match {
+    position: absolute;
+    visibility: hidden;
+    width: 12%;
+    height: 40px;
+    top: 9%;
+    left: 1%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 6px;
+    border-color: transparent;
+    cursor: pointer;
+    background: linear-gradient(to right bottom, #ffd200, #ff5300);
+}
+
+#btn-reset-this-match:active,
+#btn-reset-game:active {
+    cursor: grabbing;
+}
+
+#btn-reset-game:hover,
+#btn-reset-this-match:hover {
+    background: linear-gradient(to right bottom, #ffd200, #ff5300);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+.main-creat-name-player {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: visible;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.692);
+}
+
+.creat-name-player {
+    margin: 0 auto;
+    width: 480px;
+    height: 480px;
+    margin-top: 6%;
+    background-image: linear-gradient(to right bottom, #57bffc, #ff2121);
+    position: relative;
+    border-radius: 15px;
+}
+
+#name-player-x {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: black;
+    border-color: linear-gradient(to right bottom, #D7fe01, #5Cb00c);
+    outline: 2px solid black;
+    background-color: transparent;
+    max-height: 30px;
+    max-width: 250px;
+    font-size: large;
+    margin-top: 15%;
+}
+
+.name-player-x-lable {
+    color: #252121;
+    cursor: text;
+    position: absolute;
+    font-size: 1.1em;
+    top: 13.8%;
+    left: 25%;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+
+#name-player-x:focus+.name-player-x-lable,
+#name-player-x:valid+.name-player-x-lable {
+    transform: translate(6px, -16px)scale(.9);
+    left: 23%;
+    color: #1100ff;
+    padding-inline: 5px;
+    background: transparent;
+}
+
+#name-player-x:is(:focus, :valid) {
+    outline-color: #1100ff;
+}
+
+#name-player-o {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: black;
+    outline: 2px solid black;
+    background-color: transparent;
+    max-height: 30px;
+    max-width: 250px;
+    font-size: large;
+    margin-top: 9%;
+}
+
+.name-player-o-lable {
+    color: #252121;
+    cursor: text;
+    position: absolute;
+    font-size: 1.1em;
+    top: 29%;
+    left: 25%;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+
+#name-player-o:focus+.name-player-o-lable,
+#name-player-o:valid+.name-player-o-lable {
+    transform: translate(6px, -16px)scale(.9);
+    left: 23%;
+    color: #f00;
+    padding-inline: 5px;
+    background: transparent;
+}
+
+#name-player-o:is(:focus, :valid) {
+    outline-color: #f00;
+}
+
+#btn-start-game {
+    width: 150px;
+    height: 40px;
+    border-radius: 7px;
+    margin-top: 15%;
+    border-color: transparent;
+    background-image: linear-gradient(to right bottom, #c7eb00, #5Cb00c);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#btn-start-game:hover {
+    background: linear-gradient(to right bottom, #D7fe01, #5Cb00c);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+#btn-start-game-default {
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    margin-top: 3%;
+    border-color: transparent;
+    cursor: pointer;
+    background-image: linear-gradient(to right bottom, #01b4d5, #92dfef);
+}
+
+#btn-start-game-default:hover {
+    background-image: linear-gradient(to right bottom, #01b4d5, #92dfef);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+#btn-play-computer-game {
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    margin-top: 3%;
+    border-color: transparent;
+    cursor: pointer;
+    background-image: linear-gradient(to right bottom, #01b4d5, #92dfef);
+}
+
+#btn-play-computer-game:hover {
+    background-image: linear-gradient(to right bottom, #01b4d5, #92dfef);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+}
